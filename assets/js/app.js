@@ -11,3 +11,4 @@ var usrMenu = document.getElementById('usr_menu');
 usrBtn.addEventListener('click', function(){
     usrMenu.classList.toggle('hidden');
 });
+// disable on click other targets
