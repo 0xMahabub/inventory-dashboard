@@ -12,7 +12,7 @@
 </head>
 <body>
     <!--Body wrapper-->
-    <div class="bg-gray-100 h-screen w-full">
+    <div class="bg-gray-100 min-h-screen w-full">
         <!--Navbar-->
         <div class="flex fixed items-center justify-between w-full h-16  px-8 py-0 shadow-md pl-72">
             <div id="searchbar" class="flex items-center justify-items-start h-10">
@@ -71,8 +71,13 @@
         <!--/Navbar-->
 
         <!--Side Navigation-->
-        <div class="fixed top-0 left-0 min-h-full w-72 bg-green-300 px-4 py-4">
-            <p>sidebar</p>
+        <div class="fixed top-0 left-0 min-h-full w-72 bg-white px-6 py-3 shadow-lg">
+           <div class="logo_area text-xl font-bold uppercase text-gray-600 flex items-center justify-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+               inventory
+            </div>
         </div>
         <!--/Side Navigation-->
     </div>
