@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Managment - Dashboard</title>
+    <!--TailwindCSS-->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!--custom CSS-->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <!--Body wrapper-->
+    <div class="bg-gray-100 h-screen w-full">
+        <!--Navbar-->
+        <div class="flex fixed items-center justify-between w-full h-16  px-8 py-0 shadow-md pl-72">
+            <div id="searchbar" class="flex items-center justify-items-start h-10">
+                <div class="relative text-sm text-gray-400 ml-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 absolute top-2 left-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" placeholder="Search anything" class="outline-none pl-10 h-10 w-72 pb-1 rounded-xl bg-white text-gray-400" />
+                </div>
+               
+            </div>
+
+            <div id="navbtns" class="flex items-center justify-end ml-0">
+                <a href="#" class="relative text-xl text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                    <span class="absolute w-3 h-3 rounded-full bg-red-400 top-0 right-0"></span>
+                </a>
+
+                <div class="text-xl text-gray-600 ml-8 overflow-hidden">
+                   <div class="cursor-pointer relative flex items-center justify-between gap-1" id="usr_btn">
+                       <div class="img  relative">
+                        <img src="https://ui-avatars.com/api/?name=John+Doe" class="w-10 h-10 object-cover rounded-full" />
+                        <span class="absolute w-2 h-2 rounded-full bg-green-400 bottom-1 right-1"></span>
+                       </div>
+                        
+                        <p class="text-sm">John Doe</p>
+                        <span class="flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                   </div>
+                    
+                    <!--dropdown menu of user-->
+                    <div id="usr_menu" class="hidden absolute top-full z-50 rounded-lg shadow-lg w-48 right-0 mt-2">
+                        <div class="px-4 py-2 text-xs text-gray-400">Manage Account</div>
+                        <div class="border borer-t border-gray-200"></div>
+                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-blue-400 hover:text-white transition">Profile</a>
+                        <div class="border borer-t border-gray-200"></div>
+                        <a href="#" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-blue-400 hover:text-white transition">Logout</a>
+                    </div>
+                    <!--/dropdown menu of user-->
+                </div>
+
+                <a href="#" class="relative text-xl text-gray-600 ml-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <!-- <span class="absolute w-2 h-2 rounded-full bg-red-400 top-1 right-1"></span> -->
+                </a>
+            </div>
+        </div>
+        <!--/Navbar-->
+
+        <!--Side Navigation-->
+        <div class="fixed top-0 left-0 min-h-full w-72 bg-green-300 px-4 py-4">
+            <p>sidebar</p>
+        </div>
+        <!--/Side Navigation-->
+    </div>
+    <!--/Body wrapper-->
+
+
+    <!--Scripts-->
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
