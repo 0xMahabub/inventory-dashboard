@@ -2,4 +2,42 @@
   margin: 0;
   padding: 0;
 }
+
+::-moz-selection {
+  background-color: #3fc979;
+  color: #FFFFFF;
+}
+
+::selection {
+  background-color: #3fc979;
+  color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3fc979;
+  outline: 0;
+}
+
+#sidenav::-moz-selection {
+  background-color: #3fc979;
+  color: #FFFFFF;
+}
+
+#sidenav::selection {
+  background-color: #3fc979;
+  color: #FFFFFF;
+}
+
+#sidenav::-webkit-scrollbar {
+  width: 5px;
+}
+
+#sidenav::-webkit-scrollbar-thumb {
+  background-color: #3fc979;
+  outline: 0;
+}
 /*# sourceMappingURL=main.css.map */
